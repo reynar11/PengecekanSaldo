@@ -176,11 +176,11 @@ public class login extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    //Untuk inputan login dengan email dan password pada menu awal program
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         if (vusername.getText().equals("bagasreynara")) {
         if (vpassword.getText().equals("123456")) {
-        //Jika berhasil login maka program akan mengarahkan ke menu utama
+        //Jika berhasil login maka program akan mengarahkan ke menu selanjutnya
         new PilihanRekening().show();
         this.dispose(); }
         else {

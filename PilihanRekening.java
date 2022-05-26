@@ -84,21 +84,21 @@ public class PilihanRekening extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    //Array untuk input nomor rekening dan pilihan bank sesuai dengan nomor rekning pada program
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         String [][] scdata = {
             {"1234567890", "BANK MANDIRI"},
             {"0987654321", "BANK BRI"},
             {"1234509876", "BANK BNI"}
        };
-        for(int i=0;i<scdata.length;i++){
+        for(int i=0;i<scdata.length;i++){           //Untuk mengatur program apakah nomor rekening yang dimasukkan sudah sesuai dengan nama banknya
             if(rekening.getText().equals(scdata[i][0])&&bank.getSelectedItem().toString().equals(scdata[i][1])){
                 MobileBankMenu main = new MobileBankMenu();
                 main.setVisible(true);
                 dispose();
                 break;
             }
-            else if(i==scdata.length-1){
+            else if(i==scdata.length-1){            //Jika salah maka program tidak akan lanjut ke menu program selanjutnya dan akan memunculkan attention
                 JOptionPane.showMessageDialog(null, "Maaf nomor rekening atau bank yang anda pilih, salah...");
             }
         }

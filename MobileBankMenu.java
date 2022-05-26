@@ -159,7 +159,7 @@ public class MobileBankMenu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    //Syntax untuk tombol cek saldo
     private void btnCekSaldoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCekSaldoActionPerformed
        JOptionPane.showMessageDialog(rootPane, "Saldo Anda Saat Ini adalah :"+ saldo);
         hasil = saldo;
@@ -167,7 +167,7 @@ public class MobileBankMenu extends javax.swing.JFrame {
         answer = String.format(" %,.2f ",saldo);
         jtxtTampilan2.setText(answer);
     }//GEN-LAST:event_btnCekSaldoActionPerformed
-
+    //Syntax untuk tombol simpan, yang bertujuan menyimpan uang ke dalam rekening
     private void btnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanActionPerformed
         masukan = Integer.parseInt(JOptionPane.showInputDialog("Masukan angka : "));
         JOptionPane.showMessageDialog(rootPane,"Total saldo anda saat ini adalah :"+ (saldo + masukan));
@@ -176,7 +176,7 @@ public class MobileBankMenu extends javax.swing.JFrame {
         answer = String.format(" %,.2f ",saldo);
         jtxtTampilan2.setText(answer);
     }//GEN-LAST:event_btnSimpanActionPerformed
-
+    //Syntax untuk tombol transfer, yang bertujuan untuk mengirim uang ke rekening yang kita 
     private void btnTransferActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTransferActionPerformed
         String nama3=JOptionPane.showInputDialog("Silahkan masukkan nomor rekening tujuan ");
 
@@ -189,7 +189,7 @@ public class MobileBankMenu extends javax.swing.JFrame {
         } else if (saldo >= masukan) {
 
         }
-        hasil = saldo - masukan;
+        hasil = saldo - masukan;        //Syntax untuk menampilkan total saldo setelah melakukan transfer
         saldo=hasil;
         answer = String.format(" %,.2f ", hasil);
         jtxtTampilan2.setText(answer);
